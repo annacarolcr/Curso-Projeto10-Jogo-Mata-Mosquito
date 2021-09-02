@@ -13,7 +13,6 @@ ajustaTamanhoPalcoJogo()
 function posicaoRandomica(){
 
     //remover o mosquito anterior (caso exista)
-
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
     }
