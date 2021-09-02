@@ -17,9 +17,13 @@ function posicaoRandomica(){
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
 
-        console.log('Elemento selecionado foi: v' + vidas)
-        document.getElementById('v' + vidas).src="imagens/coracao_vazio.png"
-        vidas++
+        if(vidas > 3){
+            window.location.href = 'fim_de_jogo.html'
+
+        }else{
+            document.getElementById('v' + vidas).src="imagens/coracao_vazio.png"
+            vidas++
+        }
     }
 
     var posicaoX = Math.floor(Math.random() * largura) - 90 //subtrai 90 para que a imagem do mosquito caiba na tela ao aparecer próximo ao limite da tela
