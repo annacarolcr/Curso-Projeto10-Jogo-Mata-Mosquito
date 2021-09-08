@@ -4,6 +4,19 @@ var largura = 0
 var vidas = 1
 var tempo = 15
 
+var tempoCriaMosquito = 1500
+
+var nivel = window.location.search //search retorna apenas o "?parâmetro"
+nivel = nivel.replace('?', '') //para remover o caracter "?" que o search retorna junto ao parametro
+
+if(nivel === 'normal'){
+    tempoCriaMosquito = 1500
+}else if(nivel === 'dificil'){
+    tempoCriaMosquito = 1000
+}else if(nivel === 'chucknorris'){
+    tempoCriaMosquito = 750
+}
+
 function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
     largura = window.innerWidth
